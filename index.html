@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATLAS | Biotrop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #f5f7f5;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .header img {
+      height: 56px;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #1a1a1a;
+    }
+
+    .header h1 span {
+      color: #3a7d44;
+    }
+
+    .header p {
+      margin-top: 12px;
+      font-size: 1rem;
+      color: #6b7280;
+      letter-spacing: 0.04em;
+    }
+
+    .cards {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: 300px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(58, 125, 68, 0.15);
+      border-color: #3a7d44;
+    }
+
+    .card-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .card-icon.micro {
+      background-color: #e8f5e9;
+    }
+
+    .card-icon.extrato {
+      background-color: #e3f2fd;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+
+    .card p {
+      font-size: 0.875rem;
+      color: #6b7280;
+      line-height: 1.6;
+    }
+
+    .card-btn {
+      margin-top: 8px;
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background-color 0.2s ease;
+    }
+
+    .card-btn.micro {
+      background-color: #3a7d44;
+      color: #ffffff;
+    }
+
+    .card:hover .card-btn.micro {
+      background-color: #2d6235;
+    }
+
+    .card-btn.extrato {
+      background-color: #1565c0;
+      color: #ffffff;
+    }
+
+    .card:hover .card-btn.extrato {
+      background-color: #0d47a1;
+    }
+
+    .card.disabled {
+      opacity: 0.55;
+      pointer-events: none;
+    }
+
+    .badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    footer {
+      margin-top: 64px;
+      font-size: 0.8rem;
+      color: #9ca3af;
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>AT<span>L</span>AS</h1>
+    <p>Assistente de Fichas Técnicas B2B · Biotrop</p>
+  </div>
+
+  <div class="cards">
+
+    <!-- ATLAS - Microorganismos -->
+    <a class="card" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
+      <div class="card-icon micro">🦠</div>
+      <h2>ATLAS<br>Microorganismos</h2>
+      <p>Geração de fichas técnicas para produtos à base de microrganismos.</p>
+      <span class="card-btn micro">Acessar</span>
+    </a>
+
+    <!-- ATLAS - Extratos e Metabólitos (em breve) -->
+    <div class="card disabled">
+      <div class="card-icon extrato">🌿</div>
+      <h2>ATLAS<br>Extratos e Metabólitos</h2>
+      <p>Geração de fichas técnicas para produtos à base de extratos e metabólitos.</p>
+      <span class="badge">Em breve</span>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2026 Biotrop &mdash; uso interno
+  </footer>
+
+</body>
+</html>
