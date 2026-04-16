@@ -13,14 +13,14 @@
 
     body {
       min-height: 100vh;
-      background-color: #0a0a0a;
+      background-color: #ffffff;
       font-family: 'Segoe UI', system-ui, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 40px 20px;
-      color: #ffffff;
+      color: #0a0a0a;
     }
 
     .header {
@@ -32,13 +32,13 @@
       font-size: 3.5rem;
       font-weight: 800;
       letter-spacing: 0.18em;
-      color: #ffffff;
+      color: #0a0a0a;
     }
 
     .header p {
       margin-top: 14px;
       font-size: 0.95rem;
-      color: #555555;
+      color: #999999;
       letter-spacing: 0.06em;
     }
 
@@ -50,8 +50,8 @@
     }
 
     .card {
-      background: #111111;
-      border: 1px solid #222222;
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
       border-radius: 16px;
       padding: 44px 36px;
       width: 280px;
@@ -65,33 +65,27 @@
       gap: 18px;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #444444;
-      box-shadow: 0 0 40px rgba(255, 255, 255, 0.04);
-    }
-
     .card.active:hover {
-      border-color: #ffffff30;
-      box-shadow: 0 0 60px rgba(255, 255, 255, 0.06);
+      transform: translateY(-4px);
+      border-color: #cccccc;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
     }
 
     .card-icon {
       font-size: 2rem;
-      opacity: 0.85;
     }
 
     .card h2 {
       font-size: 1.05rem;
       font-weight: 600;
-      color: #eeeeee;
+      color: #111111;
       line-height: 1.5;
       letter-spacing: 0.02em;
     }
 
     .card p {
       font-size: 0.82rem;
-      color: #555555;
+      color: #999999;
       line-height: 1.7;
     }
 
@@ -103,13 +97,13 @@
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.05em;
-      background-color: #ffffff;
-      color: #000000;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      transition: background-color 0.2s ease;
     }
 
     .card.active:hover .card-btn {
-      background-color: #e0e0e0;
+      background-color: #333333;
     }
 
     .card.disabled {
@@ -124,21 +118,21 @@
       text-transform: uppercase;
       padding: 4px 12px;
       border-radius: 100px;
-      background-color: #1a1a1a;
-      color: #555555;
-      border: 1px solid #2a2a2a;
+      background-color: #f0f0f0;
+      color: #999999;
+      border: 1px solid #e5e5e5;
     }
 
     footer {
       margin-top: 72px;
       font-size: 0.75rem;
-      color: #333333;
+      color: #cccccc;
       text-align: center;
       letter-spacing: 0.03em;
     }
 
     footer span {
-      color: #2a2a2a;
+      color: #dddddd;
       margin-left: 16px;
     }
   </style>
