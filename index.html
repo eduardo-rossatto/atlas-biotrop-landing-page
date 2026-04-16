@@ -13,102 +13,86 @@
 
     body {
       min-height: 100vh;
-      background-color: #f5f7f5;
+      background-color: #0a0a0a;
       font-family: 'Segoe UI', system-ui, sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 40px 20px;
+      color: #ffffff;
     }
 
     .header {
       text-align: center;
-      margin-bottom: 56px;
-    }
-
-    .header img {
-      height: 56px;
-      margin-bottom: 28px;
+      margin-bottom: 64px;
     }
 
     .header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       font-weight: 800;
-      letter-spacing: 0.12em;
-      color: #1a1a1a;
-    }
-
-    .header h1 span {
-      color: #3a7d44;
+      letter-spacing: 0.18em;
+      color: #ffffff;
     }
 
     .header p {
-      margin-top: 12px;
-      font-size: 1rem;
-      color: #6b7280;
-      letter-spacing: 0.04em;
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: #555555;
+      letter-spacing: 0.06em;
     }
 
     .cards {
       display: flex;
-      gap: 32px;
+      gap: 24px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
+      background: #111111;
+      border: 1px solid #222222;
       border-radius: 16px;
-      padding: 48px 40px;
-      width: 300px;
+      padding: 44px 36px;
+      width: 280px;
       text-align: center;
       text-decoration: none;
       color: inherit;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      cursor: pointer;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(58, 125, 68, 0.15);
-      border-color: #3a7d44;
+      transform: translateY(-4px);
+      border-color: #444444;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.04);
+    }
+
+    .card.active:hover {
+      border-color: #ffffff30;
+      box-shadow: 0 0 60px rgba(255, 255, 255, 0.06);
     }
 
     .card-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 2rem;
-    }
-
-    .card-icon.micro {
-      background-color: #e8f5e9;
-    }
-
-    .card-icon.extrato {
-      background-color: #e3f2fd;
+      opacity: 0.85;
     }
 
     .card h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      line-height: 1.4;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #eeeeee;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
     }
 
     .card p {
-      font-size: 0.875rem;
-      color: #6b7280;
-      line-height: 1.6;
+      font-size: 0.82rem;
+      color: #555555;
+      line-height: 1.7;
     }
 
     .card-btn {
@@ -116,77 +100,69 @@
       display: inline-block;
       padding: 10px 28px;
       border-radius: 8px;
-      font-size: 0.875rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
-      transition: background-color 0.2s ease;
+      letter-spacing: 0.05em;
+      background-color: #ffffff;
+      color: #000000;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
-    .card-btn.micro {
-      background-color: #3a7d44;
-      color: #ffffff;
-    }
-
-    .card:hover .card-btn.micro {
-      background-color: #2d6235;
-    }
-
-    .card-btn.extrato {
-      background-color: #1565c0;
-      color: #ffffff;
-    }
-
-    .card:hover .card-btn.extrato {
-      background-color: #0d47a1;
+    .card.active:hover .card-btn {
+      background-color: #e0e0e0;
     }
 
     .card.disabled {
-      opacity: 0.55;
+      opacity: 0.4;
       pointer-events: none;
     }
 
     .badge {
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 100px;
-      background-color: #fff3cd;
-      color: #856404;
+      background-color: #1a1a1a;
+      color: #555555;
+      border: 1px solid #2a2a2a;
     }
 
     footer {
-      margin-top: 64px;
-      font-size: 0.8rem;
-      color: #9ca3af;
+      margin-top: 72px;
+      font-size: 0.75rem;
+      color: #333333;
       text-align: center;
       letter-spacing: 0.03em;
+    }
+
+    footer span {
+      color: #2a2a2a;
+      margin-left: 16px;
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <h1>AT<span>L</span>AS</h1>
+    <h1>ATLAS</h1>
     <p>Assistente de Fichas Técnicas B2B · Biotrop</p>
   </div>
 
   <div class="cards">
 
-    <!-- ATLAS - Microorganismos -->
-    <a class="card" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
-      <div class="card-icon micro">🦠</div>
+    <a class="card active" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
+      <div class="card-icon">🦠</div>
       <h2>ATLAS<br>Microorganismos</h2>
-      <p>Geração de fichas técnicas para produtos à base de microrganismos.</p>
-      <span class="card-btn micro">Acessar</span>
+      <p>Fichas técnicas para produtos à base de microrganismos.</p>
+      <span class="card-btn">Acessar</span>
     </a>
 
-    <!-- ATLAS - Extratos e Metabólitos (em breve) -->
     <div class="card disabled">
-      <div class="card-icon extrato">🌿</div>
+      <div class="card-icon">🌿</div>
       <h2>ATLAS<br>Extratos e Metabólitos</h2>
-      <p>Geração de fichas técnicas para produtos à base de extratos e metabólitos.</p>
+      <p>Fichas técnicas para produtos à base de extratos e metabólitos.</p>
       <span class="badge">Em breve</span>
     </div>
 
@@ -194,6 +170,7 @@
 
   <footer>
     &copy; 2026 Biotrop &mdash; uso interno
+    <span>created by eduardo rossatto</span>
   </footer>
 
 </body>
