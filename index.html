@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferramentas B2B | Biotrop</title>
+  <title>Ferramentas B2B | BIOTROP</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -16,229 +16,261 @@
     }
 
     body {
-      min-height: 100vh;
-      background-color: #ffffff;
+      background-color: #f5f5f5;
       font-family: 'Inter', system-ui, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
       color: #0a0a0a;
     }
 
-    .header {
+    /* ── HERO ── */
+    .hero {
+      background-color: #0a0a0a;
+      padding: 80px 40px 72px;
       text-align: center;
-      margin-bottom: 64px;
     }
 
-    .header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      letter-spacing: 0.18em;
-      color: #0a0a0a;
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #666666;
+      margin-bottom: 24px;
     }
 
-    .subheadline {
-      margin-top: 10px;
-      font-size: 1rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: #444444;
+    .hero h1 {
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      color: #ffffff;
+      line-height: 1;
     }
 
-    .header p.tagline {
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: #999999;
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555555;
       letter-spacing: 0.06em;
     }
 
-    /* Section */
-    .section {
-      width: 100%;
-      max-width: 960px;
-      margin-bottom: 56px;
+    /* ── CONTENT ── */
+    .content {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 72px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
     }
+
+    /* ── SECTION ── */
+    .section {}
 
     .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 24px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 32px;
     }
 
-    .section-title {
-      font-size: 0.7rem;
+    .section-label {
+      font-size: 0.62rem;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
-      color: #0a0a0a;
+      color: #aaaaaa;
+      margin-bottom: 8px;
     }
 
-    .section-subtitle {
-      font-size: 0.72rem;
-      color: #aaaaaa;
+    .section-name {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+
+    .section-desc {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #888888;
       letter-spacing: 0.04em;
     }
 
+    .section-divider {
+      width: 40px;
+      height: 3px;
+      background-color: #0a0a0a;
+      margin-top: 20px;
+      border-radius: 2px;
+    }
+
+    /* ── CARDS ── */
     .cards {
       display: flex;
-      gap: 24px;
+      gap: 20px;
       flex-wrap: wrap;
-      justify-content: flex-start;
     }
 
     .card {
-      background: #fafafa;
-      border: 1px solid #e5e5e5;
+      background: #ffffff;
+      border: 1px solid #e8e8e8;
       border-radius: 16px;
-      padding: 44px 36px;
+      padding: 40px 32px;
       width: 280px;
-      text-align: center;
+      text-align: left;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 18px;
+      gap: 14px;
     }
 
     .card.active:hover {
-      transform: translateY(-4px);
-      border-color: #cccccc;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-5px);
+      border-color: #c0c0c0;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
     }
 
     .card-icon {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .card h2 {
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 0.98rem;
+      font-weight: 700;
       color: #111111;
-      line-height: 1.5;
-      letter-spacing: 0.02em;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
     }
 
     .card p {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #999999;
-      line-height: 1.7;
+      line-height: 1.75;
+      flex: 1;
     }
 
     .card-btn {
-      margin-top: 8px;
+      margin-top: 6px;
       display: inline-block;
-      padding: 10px 28px;
+      padding: 10px 24px;
       border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       background-color: #0a0a0a;
       color: #ffffff;
-      transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      align-self: flex-start;
     }
 
     .card.active:hover .card-btn {
-      background-color: #333333;
+      background-color: #2a2a2a;
     }
 
     .card.disabled {
-      opacity: 0.4;
+      opacity: 0.38;
       pointer-events: none;
     }
 
     .badge {
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 100px;
       background-color: #f0f0f0;
       color: #999999;
       border: 1px solid #e5e5e5;
+      align-self: flex-start;
     }
 
+    /* ── FOOTER ── */
     footer {
-      margin-top: 16px;
-      font-size: 0.75rem;
-      color: #cccccc;
       text-align: center;
-      letter-spacing: 0.03em;
+      padding: 28px 20px 40px;
+      font-size: 0.72rem;
+      color: #bbbbbb;
+      letter-spacing: 0.04em;
     }
 
     footer span {
       color: #dddddd;
-      margin-left: 16px;
+      margin-left: 14px;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <h1>Biotrop</h1>
-    <p class="subheadline">Ferramentas B2B</p>
-    <p class="tagline">Fichas técnicas de produto e cliente · uso interno</p>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-tag">Ferramentas B2B</div>
+    <h1>BIOTROP</h1>
+    <p class="hero-sub">Fichas técnicas de produto e cliente &middot; uso interno</p>
   </div>
 
-  <!-- ATLAS -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-title">ATLAS</span>
-      <span class="section-subtitle">Agronomic, Technical &amp; Legal Attributes Sheet &mdash; Fichas Técnicas de Produto</span>
-    </div>
-    <div class="cards">
+  <!-- Content -->
+  <div class="content">
 
-      <a class="card active" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
-        <div class="card-icon">🦠</div>
-        <h2>ATLAS<br>Microorganismos</h2>
-        <p>Fichas técnicas para produtos à base de microrganismos.</p>
-        <span class="card-btn">Acessar</span>
-      </a>
-
-      <a class="card active" href="https://atlas-extratos-e-metabolitos.streamlit.app/" target="_blank" rel="noopener">
-        <div class="card-icon">🌿</div>
-        <h2>ATLAS<br>Extratos e Metabólitos</h2>
-        <p>Fichas técnicas para produtos à base de extratos e metabólitos.</p>
-        <span class="card-btn">Acessar</span>
-      </a>
-
-      <div class="card disabled">
-        <div class="card-icon">🌱</div>
-        <h2>ATLAS<br>Bioestimulantes</h2>
-        <p>Fichas técnicas para produtos bioestimulantes.</p>
-        <span class="badge">Em breve</span>
+    <!-- ATLAS -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-label">Fichas Técnicas de Produto</div>
+        <div class="section-name">ATLAS</div>
+        <div class="section-desc">Agronomic, Technical &amp; Legal Attributes Sheet</div>
+        <div class="section-divider"></div>
       </div>
+      <div class="cards">
 
-    </div>
-  </div>
+        <a class="card active" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
+          <div class="card-icon">🦠</div>
+          <h2>ATLAS<br>Microorganismos</h2>
+          <p>Fichas técnicas para produtos à base de microrganismos.</p>
+          <span class="card-btn">Acessar</span>
+        </a>
 
-  <!-- PRISMA -->
-  <div class="section">
-    <div class="section-header">
-      <span class="section-title">PRISMA</span>
-      <span class="section-subtitle">Partner · Relationship · Intelligence · Strategy · Mapping · Assessment &mdash; Ficha Técnica de Cliente</span>
-    </div>
-    <div class="cards">
+        <a class="card active" href="https://atlas-extratos-e-metabolitos.streamlit.app/" target="_blank" rel="noopener">
+          <div class="card-icon">🌿</div>
+          <h2>ATLAS<br>Extratos e Metabólitos</h2>
+          <p>Fichas técnicas para produtos à base de extratos e metabólitos.</p>
+          <span class="card-btn">Acessar</span>
+        </a>
 
-      <div class="card disabled">
-        <div class="card-icon">🤝</div>
-        <h2>PRISMA<br>Clientes</h2>
-        <p>Ficha técnica completa de clientes: dados cadastrais, comerciais, logísticos e estratégicos.</p>
-        <span class="badge">Em breve</span>
+        <div class="card disabled">
+          <div class="card-icon">🌱</div>
+          <h2>ATLAS<br>Bioestimulantes</h2>
+          <p>Fichas técnicas para produtos bioestimulantes.</p>
+          <span class="badge">Em breve</span>
+        </div>
+
       </div>
-
     </div>
+
+    <!-- PRISMA -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-label">Ficha Técnica de Cliente</div>
+        <div class="section-name">PRISMA</div>
+        <div class="section-desc">Partner &middot; Relationship &middot; Intelligence &middot; Strategy &middot; Mapping &middot; Assessment</div>
+        <div class="section-divider"></div>
+      </div>
+      <div class="cards">
+
+        <div class="card disabled">
+          <div class="card-icon">🤝</div>
+          <h2>PRISMA<br>Clientes</h2>
+          <p>Ficha técnica completa de clientes: dados cadastrais, comerciais, logísticos e estratégicos.</p>
+          <span class="badge">Em breve</span>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    &copy; 2026 Biotrop &mdash; uso interno
+    &copy; 2026 BIOTROP &mdash; uso interno
     <span>created by eduardo rossatto</span>
   </footer>
 
