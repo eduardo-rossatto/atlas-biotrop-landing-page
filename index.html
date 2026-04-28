@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ATLAS | Biotrop</title>
+  <title>Ferramentas B2B | Biotrop</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧬</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,18 +47,48 @@
       color: #444444;
     }
 
-    .header p {
+    .header p.tagline {
       margin-top: 14px;
       font-size: 0.95rem;
       color: #999999;
       letter-spacing: 0.06em;
     }
 
+    /* Section */
+    .section {
+      width: 100%;
+      max-width: 960px;
+      margin-bottom: 56px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+    }
+
+    .section-subtitle {
+      font-size: 0.72rem;
+      color: #aaaaaa;
+      letter-spacing: 0.04em;
+    }
+
     .cards {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     .card {
@@ -136,7 +166,7 @@
     }
 
     footer {
-      margin-top: 72px;
+      margin-top: 16px;
       font-size: 0.75rem;
       color: #cccccc;
       text-align: center;
@@ -152,34 +182,59 @@
 <body>
 
   <div class="header">
-    <h1>ATLAS</h1>
-    <p class="subheadline">Agronomic, Technical & Legal Attributes Sheet</p>
-    <p>Assistente de Fichas Técnicas B2B · Biotrop</p>
+    <h1>Biotrop</h1>
+    <p class="subheadline">Ferramentas B2B</p>
+    <p class="tagline">Fichas técnicas de produto e cliente · uso interno</p>
   </div>
 
-  <div class="cards">
-
-    <a class="card active" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
-      <div class="card-icon">🦠</div>
-      <h2>ATLAS<br>Microorganismos</h2>
-      <p>Fichas técnicas para produtos à base de microrganismos.</p>
-      <span class="card-btn">Acessar</span>
-    </a>
-
-    <a class="card active" href="https://atlas-extratos-e-metabolitos.streamlit.app/" target="_blank" rel="noopener">
-      <div class="card-icon">🌿</div>
-      <h2>ATLAS<br>Extratos e Metabólitos</h2>
-      <p>Fichas técnicas para produtos à base de extratos e metabólitos.</p>
-      <span class="card-btn">Acessar</span>
-    </a>
-
-    <div class="card disabled">
-      <div class="card-icon">🌱</div>
-      <h2>ATLAS<br>Bioestimulantes</h2>
-      <p>Fichas técnicas para produtos bioestimulantes.</p>
-      <span class="badge">Em breve</span>
+  <!-- ATLAS -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-title">ATLAS</span>
+      <span class="section-subtitle">Agronomic, Technical &amp; Legal Attributes Sheet &mdash; Fichas Técnicas de Produto</span>
     </div>
+    <div class="cards">
 
+      <a class="card active" href="https://atlasb2b.streamlit.app/" target="_blank" rel="noopener">
+        <div class="card-icon">🦠</div>
+        <h2>ATLAS<br>Microorganismos</h2>
+        <p>Fichas técnicas para produtos à base de microrganismos.</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <a class="card active" href="https://atlas-extratos-e-metabolitos.streamlit.app/" target="_blank" rel="noopener">
+        <div class="card-icon">🌿</div>
+        <h2>ATLAS<br>Extratos e Metabólitos</h2>
+        <p>Fichas técnicas para produtos à base de extratos e metabólitos.</p>
+        <span class="card-btn">Acessar</span>
+      </a>
+
+      <div class="card disabled">
+        <div class="card-icon">🌱</div>
+        <h2>ATLAS<br>Bioestimulantes</h2>
+        <p>Fichas técnicas para produtos bioestimulantes.</p>
+        <span class="badge">Em breve</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRISMA -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-title">PRISMA</span>
+      <span class="section-subtitle">Partner · Relationship · Intelligence · Strategy · Mapping · Assessment &mdash; Ficha Técnica de Cliente</span>
+    </div>
+    <div class="cards">
+
+      <div class="card disabled">
+        <div class="card-icon">🤝</div>
+        <h2>PRISMA<br>Clientes</h2>
+        <p>Ficha técnica completa de clientes: dados cadastrais, comerciais, logísticos e estratégicos.</p>
+        <span class="badge">Em breve</span>
+      </div>
+
+    </div>
   </div>
 
   <footer>
